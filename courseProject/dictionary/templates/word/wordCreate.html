@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Word create{% endblock %}
+
+
+{% block body %}
+<h3>Word create</h3>
+
+<form method="POST"> {% csrf_token %}
+    <p>
+        Word <input type="text" name="word" required>
+    </p>
+    <p>
+        translation <input type="text" name="translation" required>
+    </p>
+
+    <input type="submit" name="CreateWord" value="Next">
+</form>
+{% endblock %}
+
+
+
+
+
