@@ -9,5 +9,9 @@ urlpatterns = [
     path('authorization/register', views.register, name='register'),
     path('authorization/logout', views.logoutUser, name='logout'),
 
-    path('dictionary/word/create', views.createWord, name='word-create')
+    path('dictionary/', views.dictionaryGet, name='dictionary'),
+    path('dictionary/word/create', views.createWord, name='word-create'),
+    path('dictionary/word/create/<int:fields>', views.createWord, name='word-create'),
+    path('dictionary/word/delete/<int:word_id>', views.deleteWord, name='word-delete'),
+    path('dictionary/word/details/<int:word_id>', views.detailsWord, name='word-details'),
 ]

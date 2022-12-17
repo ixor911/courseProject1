@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Dictionary{% endblock %}
+
+{% block body %}
+<h3>Dictionary</h3>
+<a href="word/create"><button>Create word</button></a>
+<table>
+    <tr>
+        <th>Word</th>
+        <th>Translation</th>
+        <th>Last read</th>
+        <th></th>
+    </tr>
+
+    {% for word in words_list %}
+        <tr>
+            <th>{{ word.word }}</th>
+            <th>{{ word.translations }}</th>
+            <th>{{ word.last_date }}</th>
+
+            <th><a href="word/details/{{ word.word_id }}"><button>Details</button></a></th>
+            <th><a href="word/delete/{{ word.word_id }}"><button>Delete</button></a></th>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
+

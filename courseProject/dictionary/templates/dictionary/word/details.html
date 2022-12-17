@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Details{% endblock %}
+
+
+{% block body %}
+
+<h3>Word details</h3>
+
+<p>Word: {{word.word}}</p>
+<p>translations: {{word.translation}}</p>
+<p>Last read: {{word.lastRead}}</p>
+<p>Creation date: {{word.publishDate}}</p>
+
+{% endblock %}
+

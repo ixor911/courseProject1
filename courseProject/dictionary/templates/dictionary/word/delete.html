@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete{% endblock %}
+
+
+{% block body %}
+
+<h3>Word delete</h3>
+<form method="POST"> {% csrf_token %}
+    <p>
+        Word: {{ word }}
+    </p>
+    <p>
+        Translation: {{ translations }}
+    </p>
+    <p>
+        Creation date: {{ creation_date }}
+    </p>
+    Are you sure?
+    <input type="submit" value="Delete">
+</form>
+{% endblock %}
+

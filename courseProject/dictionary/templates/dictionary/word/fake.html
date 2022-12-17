@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Fake{% endblock %}
+
+
+{% block body %}
+<h3>You don't have this word in your dictionary</h3>
+<a href="{% url 'dictionary' %}"><button>Return</button></a>
+
+{% endblock %}
+
